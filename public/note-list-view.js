@@ -9,7 +9,6 @@
       output += `<li><div>${note.text}</div></li>`
     })
     output += '</ul>'
-    console.log(output)
     return output
   }
   exports.NoteListView = NoteListView
