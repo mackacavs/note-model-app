@@ -4,11 +4,11 @@
   }
 
   NoteListView.prototype.returnsView = function () {
-    let output = '<ul>';
+    let output = '<ul>'
     this.noteList.list.forEach(function (note) {
-      output += '<li><div>${note.text.slice(0,20)}...</div></li>';
+      output += `<li><div>${note.text.slice(0,20)}...</div></li>`
     })
-    output += '</ul>';
+    output += '</ul>'
   
     return output
   }

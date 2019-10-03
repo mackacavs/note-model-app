@@ -1,19 +1,19 @@
 (function (exports) {
   function NoteController(noteList) {
-    this.noteList = noteList;
+    this.noteList = noteList
   }
 
   NoteController.prototype.add = function (text) {
-    this.noteList.list.push(text);
-  };
+    this.noteList.list.push(text)
+  }
 
   NoteController.prototype.createNoteListView = function () {
-    this.noteListView = new NoteListView(this.noteList);
-  };
+    this.noteListView = new NoteListView(this.noteList)
+  }
 
   NoteController.prototype.render = function () {
-    document.getElementById('app').innerHTML = this.noteListView.returnsView();
-  };
+    document.getElementById('app').innerHTML = this.noteListView.returnsView()
+  }
 
-  exports.NoteController = NoteController;
-})(this);
+  exports.NoteController = NoteController
+})(this)
