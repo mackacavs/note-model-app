@@ -21,7 +21,7 @@ checkReturnText()
 function noteShouldHaveID() {
   nameOfFunc = arguments.callee.toString().match(/function\s+([^\s\(]+)/);
 
-  assert.isTrue(note.id === 0, nameOfFunc[1]);
+  assert.isTrue(note.id === 1, nameOfFunc[1]);
 }
 noteShouldHaveID()
 

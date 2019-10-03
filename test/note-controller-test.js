@@ -8,16 +8,14 @@ noteControllerCanBeInstantiated();
 
 function loadNoteOnHashChangeEvent() {
   nameOfFunc = arguments.callee.toString().match(/function\s+([^\s\(]+)/);
-  noteController = new NoteController(new NoteList);
-  noteController.add("This is a note that is more than 20 charaters")
-  noteController.createNoteListView()
-  noteController.render()
-  setTimeout(2000);
-  document.getElementsByTagName('a')[0].click();
-  assert.isTrue(document.getElementById('app').innerHTML === "This is a note that is more than 20 charaters", nameOfFunc[1])
+  document.getElementsByTagName('a')[0].click()
+  function assertion() {
+    assert.isTrue(document.getElementById('app').innerHTML === "<div>This is my note that is long</div>", nameOfFunc[1])
+  }
+  setTimeout(assertion, 2000)
 }
 
-loadNoteOnHashChangeEvent();
+setTimeout(loadNoteOnHashChangeEvent, 500)
 
 
 

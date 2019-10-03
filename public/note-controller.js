@@ -46,4 +46,8 @@
 })(this);
 
 controller = new NoteController(new NoteList());
+controller.makeURLChangeShowNoteForCurrentPage()
+controller.createNoteListView()
+controller.add("This is my note that is long")
+controller.render()
 
