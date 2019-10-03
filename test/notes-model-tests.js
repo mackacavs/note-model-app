@@ -1,5 +1,5 @@
+let note = new Note("My favourite language is JavaScript");
 
-var note = new Note("My favourite language is JavaScript");
 function checkNewNoteInstantiated() {
   nameOfFunc = arguments.callee.toString().match(/function\s+([^\s\(]+)/);
 
@@ -17,3 +17,20 @@ function checkReturnText() {
   assert.isTrue(actual === expectation, nameOfFunc[1]);
 }
 checkReturnText()
+
+function noteShouldHaveID() {
+  nameOfFunc = arguments.callee.toString().match(/function\s+([^\s\(]+)/);
+
+  assert.isTrue(note.id === 0, nameOfFunc[1]);
+}
+noteShouldHaveID()
+
+function notesShouldHaveUniqueIDs() {
+  nameOfFunc = arguments.callee.toString().match(/function\s+([^\s\(]+)/);
+  let note2 = new Note("My favourite language is Ruby")
+
+  assert.isTrue(note2.id !== note.id, nameOfFunc[1]);
+}
+notesShouldHaveUniqueIDs()
+
+
