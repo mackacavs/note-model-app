@@ -4,7 +4,7 @@
   }
 
   NoteController.prototype.add = function (text) {
-    this.noteList.list.push(text)
+    this.noteList.createNote(text)
   }
 
   NoteController.prototype.createNoteListView = function () {
